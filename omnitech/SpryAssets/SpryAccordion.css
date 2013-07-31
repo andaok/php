@@ -1,0 +1,389 @@
+@charset "UTF-8";
+
+/* SpryAccordion.css - Revision: Spry Preview Release 1.4 */
+
+/* Copyright (c) 2006. Adobe Systems Incorporated. All rights reserved. */
+
+/* This is the selector for the main Accordion container. For our default style,
+ * we draw borders on the left, right, and bottom. The top border of the Accordion
+ * will be rendered by the first AccordionPanelTab which never moves.
+ *
+ * If you want to constrain the width of the Accordion widget, set a width on
+ * the Accordion container. By default, our accordion expands horizontally to fill
+ * up available space.
+ *
+ * The name of the class ("Accordion") used in this selector is not necessary
+ * to make the widget function. You can use any class name you want to style the
+ * Accordion container.
+ */
+.Accordion {
+	width:300px;
+	overflow: hidden;
+/*	border-bottom:2px #006 solid;*/
+    float: left;
+}
+
+/* This is the selector for the AccordionPanel container which houses the
+ * panel tab and a panel content area. It doesn't render visually, but we
+ * make sure that it has zero margin and padding.
+ *
+ * The name of the class ("AccordionPanel") used in this selector is not necessary
+ * to make the widget function. You can use any class name you want to style an
+ * accordion panel container.
+*/
+.AccordionPanel {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* This is the selector for the AccordionPanelTab. This container houses
+ * the title for the panel. This is also the container that the user clicks
+ * on to open a specific panel.
+ *
+ * The name of the class ("AccordionPanelTab") used in this selector is not necessary
+ * to make the widget function. You can use any class name you want to style an
+ * accordion panel tab container.
+ */
+.AccordionPanelTab {
+	background: url(ac-open-back.gif) no-repeat;
+	font: bold 13px Arial;
+	color:#FFFFFF;
+	line-height:30px;
+	height:30px;
+	margin: 0px;
+	padding: 0px 30px;
+	cursor: pointer;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+}
+
+.top{
+	background: url(ac-open-back-top.gif) no-repeat;
+}
+
+/* This is the selector for a Panel's Content area. It's important to note that
+ * you should never put any padding on the panel's content area if you plan to
+ * use the Accordions panel animations. Placing a non-zero padding on the content
+ * area can cause the accordion to abruptly grow in height while the panels animate.
+ *
+ * Anyone who styles an Accordion *MUST* specify a height on the Accordion Panel
+ * Content container.
+ *
+ * The name of the class ("AccordionPanelContent") used in this selector is not necessary
+ * to make the widget function. You can use any class name you want to style an
+ * accordion panel content container.
+ */
+.AccordionPanelContent {
+	background:#ADF;
+	font:12px/18px Arial;
+	overflow: auto;
+	margin: 0px;
+	padding: 0 10px;
+	height: 300px;
+	border-left:2px #006 solid;
+	border-right:2px #006 solid;
+}
+
+.AccordionPanelContent img{
+ float:left;
+ padding:2px;
+ margin:2px;
+ border:1px #aaa dashed;
+ }
+
+/* This is an example of how to change the appearance of the panel tab that is
+ * currently open. The class "AccordionPanelOpen" is programatically added and removed
+ * from panels as the user clicks on the tabs within the Accordion.
+ */
+.AccordionPanelOpen .AccordionPanelTab {
+	background: url(ac-open-back-open.gif) no-repeat;
+}
+
+.AccordionPanelOpen .top {
+	background: url(ac-open-back-top-open.gif) no-repeat;
+}
+
+/* This is an example of how to change the appearance of the panel tab as the
+ * mouse hovers over it. The class "AccordionPanelTabHover" is programatically added
+ * and removed from panel tab containers as the mouse enters and exits the tab container.
+ */
+
+/* This is an example of how to change the appearance of all the panel tabs when the
+ * Accordion has focus. The "AccordionFocused" class is programatically added and removed
+ * whenever the Accordion gains or loses keyboard focus.
+ */
+/* under content by myself add */
+.firstletter {
+   font-size:2em;
+   float:left; 
+}
+/*.tabpcontent {
+    text-decoration: underline;
+    text-indent: 2em; 
+} 
+*/
+p{
+font-family:Arial,Georgia, "Times New Roman", Times, serif;
+font-size:12px;
+font-weight:bold;
+font-style:italic;
+}
+#container,#header,#footer {
+margin:0 auto;
+width:960px;
+border:1px white solid ;
+}
+#content{
+float:right;
+width:660px;
+}
+#footer{
+clear:both;
+}
+/*对table标记设置共性*/
+table.tutable {
+    margin: 0 auto;
+    text-align: center;
+}
+table{
+    margin: 0 auto;
+    text-align: center;
+}
+/*对td中的img标记设置共性*/
+table.tutable  tr td img{
+    border-style: none;
+    margin: 12px 20px;
+}
+/*对标记td设置共性*/
+table.tutable  tr td{
+    border-style: none;
+    border-bottom-style: solid;
+    /*border-bottom-color: #2E6FA9;*/
+    border-bottom-color:white;
+    border-bottom-width: thin; 
+}
+/*对所有a标记设置共性*/
+a{
+    font-family:Arial,Georgia, "Times New Roman", Times, serif;
+    font-size:12px;
+    font-weight:bold;
+    font-style:italic;
+}
+/*对表格中a标记设置共性*/
+table a:link,table a:visited{	
+    	text-decoration: none;
+        color: black;
+}
+/*navigate栏*/
+#naviurl,#navipage{
+      /*background: #2E6FA9 url('../images/naviurl_left.gif') no-repeat left top; */
+      background: #2E6FA9 no-repeat;
+      width: 660px;
+      height: 30px;
+}
+#naviurl h4{
+    background: #2E6FA9 url('../images/naviurl_right.gif') no-repeat right top;
+    width: 29px;
+    height: 30px;
+    float: right;
+    margin: 0px;
+}
+/**/
+#naviurl,#showtable,#navipage,#selectdiv{
+    margin:0 auto;
+    width:658px;
+}
+#naviurl{
+    border-bottom: #006 thin solid;
+}
+#navipage{
+    border-top: #006 thin solid;
+}
+/**/
+
+#naviurl p{
+    background: #2E6FA9 url('../images/naviurl_left.gif') no-repeat left top;
+    width: 600px;
+    height: 30px;
+    float: left;
+    text-indent: 3em;
+    font: bold 13px Arial;
+    color: white;
+    line-height:30px;
+    margin: 0px;
+}
+#naviurl a:link,#naviurl a:visited{
+    	text-decoration: none;
+        color:#FFFFFF;
+        font: bold 13px Arial;
+        
+}
+/**/
+#navipage h4{
+    background: #2E6FA9 url('../images/navipage_right.gif') no-repeat right top;
+    width: 29px;
+    height: 30px;
+    float: right;
+    margin: 0px;
+}
+#navipage p{
+    background: #2E6FA9 url('../images/navipage_left.gif') no-repeat left top;
+    width: 600px;
+    height: 30px;
+    float: left;
+    text-indent: 40em;
+    font: bold 13px Arial;
+    color: white;
+    line-height:30px;
+    margin: 0px;
+}
+#navipage a:link,#navipage a:visited{
+    	/*text-decoration: none;*/
+        color:#FFFFFF;
+        font: bold 13px Arial;
+        
+}
+/*主目录底部联系方式,online咨询*/
+#catalogbottom{
+    background: url('../images/catalog_bottom.gif') no-repeat;
+    line-height:30px;
+	height:30px;
+    margin: 0px;
+    padding: 0px 30px;
+    border-top: #006 thin solid;
+}
+#catalogbottom p{
+    text-align: center;
+    /*text-indent: 1em;*/
+    font: bold 13px Arial;
+    color: white;
+    height: 30px;
+    line-height:30px;
+}
+/**/
+.AccordionPanelproductContent{
+	background:#ADF;
+	font:12px/18px Arial;
+    overflow: auto;
+	margin: 0px;
+	padding: 0 10px;
+	height: 569px;
+	border-left:2px #006 solid;
+	border-right:2px #006 solid;
+}
+.AccordionPanelproductContent img{
+ float:left;
+ padding:2px;
+ margin:2px;
+ border:1px #aaa dashed;
+ }
+ /**/
+ #showtable{
+    height: 518px;
+    overflow: auto;
+    border-right: 2px solid #010006; 
+ }
+ /*header css*/
+ #header{
+    width: 960px;
+    height: 45px;
+ }
+ #header #pimagetop{
+    margin: 0 auto;
+    height: 30px;
+    font: bold 13px Arial;
+    color: white;
+    line-height:30px; 
+    text-indent: 5em;
+ }
+ #pimagetop{
+    background: url('../images/header_top.gif') no-repeat top;
+    width: 960px;
+    height: 30px;
+ }
+ #pimagebottom{
+    background: url('../images/header_bottom.gif') no-repeat bottom;
+    width: 960px;
+    height: 30px;
+ }
+ #headerp{
+    text-align: center;
+    height: 60px;
+    font: bold 13px Arial;
+    color: white;
+    line-height:60px; 
+ }
+ #footer{
+    /*background: #2E6FA9 url('../images/footer1.gif') repeat-y;*/
+    width: 960px;
+    height: 100px;
+    font: bold 13px Arial;
+    color: white;
+    
+ }
+ #header p{
+    font:bold 12px Arial;
+    color: black;
+ }
+ #footer p{
+    margin: 5px auto;
+    text-align: center;
+    font: bold 12px Arial;
+    color: black;
+ }
+ body{
+	margin-top: 10px;
+ }
+ /**/
+ #selectdiv{
+    border-bottom-style: none;
+    border-right: 2px solid #010006; 
+ }
+ select{
+   font: bold 12px Arial; 
+ }
+ input{
+    font: bold 12px Arial; 
+ }
+ 
+/*产品信息table css*/
+.infotable{
+    font: bold 12px Arial;
+    color: black;
+}
+    
+/*FAQ区域CSS*/
+.STYLE34 {font-size: 16px}
+.STYLE35 {font-family: "Times New Roman", Times, serif}
+.STYLE37 {font: bold 12px Arial;}
+.STYLE38 {font-size: 12}
+.STYLE42 {font-size: 12; color: #FF0000; }
+.STYLE3 {font-family: "Courier New", Courier, monospace; font-size: 14px; color: #FFFFFF; }
+.STYLE8 {color: #2E6FA9; font-weight: bold; }
+.STYLE10 {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 12px;
+	color: #2E6FA9;
+}
+.STYLE12 {font-size: 12px}
+.STYLE15 {font-family: "Courier New", Courier, monospace; font-size: 12px; color: #FFFFFF; }
+.STYLE33 {font-size: 12px; font-family: "Times New Roman", Times, serif; }
+
+/*contact us区域css*/
+.contact1 {
+    font-family: "Times New Roman", Times, serif; font-size: 14px; font-weight: bold;
+    color: #FF0000
+}
+.contact2 {
+    font-family: Arial;
+    font-size: 12px;
+}
+/*contact us message 区域css*/
+.contact3{
+    font-family: Arial; font-size: 12px; font-weight: bold;
+}
+.contact4{
+    font-family: Arial; font-size: 10px; font-weight: bold;
+    color: red;
+    border:1px;border-bottom-style:none;border-top-style:none;border-left-style:none;border-right-style:none;
+}
